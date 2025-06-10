@@ -1,0 +1,170 @@
+masayukikuroda@kurodanoMacBook-Pro Desktop % mkdir git_challenge
+masayukikuroda@kurodanoMacBook-Pro Desktop % ls -al
+total 24
+drwx------+  9 masayukikuroda  staff   288  6 10 21:36 .
+drwxr-xr-x+ 24 masayukikuroda  staff   768  6 10 21:23 ..
+-rw-r--r--@  1 masayukikuroda  staff  8196  6 10 21:36 .DS_Store
+-rw-r--r--   1 masayukikuroda  staff     0 11 28  2020 .localized
+drwxr-xr-x@  2 masayukikuroda  staff    64  6 10 21:36 git_challenge
+drwxr-xr-x@  4 masayukikuroda  staff   128  6  9 18:15 git_tutorial
+drwxr-xr-x@  3 masayukikuroda  staff    96  6  8 11:37 kadai_github
+drwxr-xr-x@  4 masayukikuroda  staff   128  6  5 18:23 Lesson
+drwxr-xr-x@  3 masayukikuroda  staff    96  6  8 09:38 samurai
+masayukikuroda@kurodanoMacBook-Pro Desktop % cd git_challenge 
+masayukikuroda@kurodanoMacBook-Pro git_challenge % ls
+masayukikuroda@kurodanoMacBook-Pro git_challenge % ls
+masayukikuroda@kurodanoMacBook-Pro git_challenge % ls -al
+total 0
+drwxr-xr-x@ 2 masayukikuroda  staff   64  6 10 21:36 .
+drwx------+ 9 masayukikuroda  staff  288  6 10 21:36 ..
+masayukikuroda@kurodanoMacBook-Pro git_challenge % git init
+Initialized empty Git repository in /Users/masayukikuroda/Desktop/git_challenge/.git/
+masayukikuroda@kurodanoMacBook-Pro git_challenge % ls -al
+total 0
+drwxr-xr-x@ 3 masayukikuroda  staff   96  6 10 21:37 .
+drwx------+ 9 masayukikuroda  staff  288  6 10 21:36 ..
+drwxr-xr-x@ 9 masayukikuroda  staff  288  6 10 21:37 .git
+masayukikuroda@kurodanoMacBook-Pro git_challenge % ls -al
+total 0
+drwxr-xr-x@ 4 masayukikuroda  staff  128  6 10 21:39 .
+drwx------+ 9 masayukikuroda  staff  288  6 10 21:36 ..
+drwxr-xr-x@ 9 masayukikuroda  staff  288  6 10 21:37 .git
+-rw-r--r--@ 1 masayukikuroda  staff    0  6 10 21:39 hello_world.txt
+masayukikuroda@kurodanoMacBook-Pro git_challenge % git add hello_world.txt
+masayukikuroda@kurodanoMacBook-Pro git_challenge % cat hello_world.txt 
+masayukikuroda@kurodanoMacBook-Pro git_challenge % vi hello_world.txt 
+masayukikuroda@kurodanoMacBook-Pro git_challenge % cat hello_world.txt 
+Hello, world!
+masayukikuroda@kurodanoMacBook-Pro git_challenge % 
+masayukikuroda@kurodanoMacBook-Pro git_challenge % 
+masayukikuroda@kurodanoMacBook-Pro git_challenge % git commit -m "Hello world"
+[main (root-commit) 47311cc] Hello world
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hello_world.txt
+masayukikuroda@kurodanoMacBook-Pro git_challenge % vi hello_world.txt 
+masayukikuroda@kurodanoMacBook-Pro git_challenge % cat hello_world.txt 
+Hello, world!
+こんにちは、世界！
+masayukikuroda@kurodanoMacBook-Pro git_challenge % git commit -m "こんにちは、世界"
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello_world.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+masayukikuroda@kurodanoMacBook-Pro git_challenge % git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello_world.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+masayukikuroda@kurodanoMacBook-Pro git_challenge % git diff
+diff --git a/hello_world.txt b/hello_world.txt
+index e69de29..8ee003c 100644
+--- a/hello_world.txt
++++ b/hello_world.txt
+@@ -0,0 +1,2 @@
++Hello, world!
++こんにちは、世界！
+masayukikuroda@kurodanoMacBook-Pro git_challenge % git log
+commit 47311cc5aa79e8b909c11a737c202f1b91487e06 (HEAD -> main)
+Author: MasayukiKurodaGit <rakko.management@gmail.com>
+Date:   Tue Jun 10 21:46:11 2025 +0900
+
+    Hello world
+masayukikuroda@kurodanoMacBook-Pro git_challenge % ls -al
+total 8
+drwxr-xr-x@  4 masayukikuroda  staff  128  6 10 21:48 .
+drwx------+  9 masayukikuroda  staff  288  6 10 21:36 ..
+drwxr-xr-x@ 12 masayukikuroda  staff  384  6 10 21:50 .git
+-rw-r--r--@  1 masayukikuroda  staff   42  6 10 21:48 hello_world.txt
+masayukikuroda@kurodanoMacBook-Pro git_challenge % cat hello_world.txt 
+Hello, world!
+こんにちは、世界！
+masayukikuroda@kurodanoMacBook-Pro git_challenge % git diff
+diff --git a/hello_world.txt b/hello_world.txt
+index e69de29..8ee003c 100644
+--- a/hello_world.txt
++++ b/hello_world.txt
+@@ -0,0 +1,2 @@
++Hello, world!
++こんにちは、世界！
+masayukikuroda@kurodanoMacBook-Pro git_challenge % git log
+commit 47311cc5aa79e8b909c11a737c202f1b91487e06 (HEAD -> main)
+Author: MasayukiKurodaGit <rakko.management@gmail.com>
+Date:   Tue Jun 10 21:46:11 2025 +0900
+
+    Hello world
+masayukikuroda@kurodanoMacBook-Pro git_challenge % git log -n 
+error: -n requires an argument
+masayukikuroda@kurodanoMacBook-Pro git_challenge % vi hello_world.txt 
+masayukikuroda@kurodanoMacBook-Pro git_challenge % cat hello_world.txt 
+Hello, world!
+masayukikuroda@kurodanoMacBook-Pro git_challenge % git add .
+masayukikuroda@kurodanoMacBook-Pro git_challenge % git commit -m "HelloWorld"
+[main 3a7d7e4] HelloWorld
+ 1 file changed, 1 insertion(+)
+masayukikuroda@kurodanoMacBook-Pro git_challenge % git status
+On branch main
+nothing to commit, working tree clean
+masayukikuroda@kurodanoMacBook-Pro git_challenge % git diff
+masayukikuroda@kurodanoMacBook-Pro git_challenge % git log
+commit 3a7d7e4e82be0a24821ec39fd54028fb5baf21dd (HEAD -> main)
+Author: MasayukiKurodaGit <rakko.management@gmail.com>
+Date:   Tue Jun 10 21:55:41 2025 +0900
+
+    HelloWorld
+
+commit 47311cc5aa79e8b909c11a737c202f1b91487e06
+Author: MasayukiKurodaGit <rakko.management@gmail.com>
+Date:   Tue Jun 10 21:46:11 2025 +0900
+
+    Hello world
+masayukikuroda@kurodanoMacBook-Pro git_challenge % git log -n
+error: -n requires an argument
+masayukikuroda@kurodanoMacBook-Pro git_challenge % git log --oneline
+3a7d7e4 (HEAD -> main) HelloWorld
+47311cc Hello world
+masayukikuroda@kurodanoMacBook-Pro git_challenge % vi hello_world.txt 
+masayukikuroda@kurodanoMacBook-Pro git_challenge % cat hello_world.txt 
+Hello, world!
+こんにちは、世界！
+masayukikuroda@kurodanoMacBook-Pro git_challenge % git add .
+masayukikuroda@kurodanoMacBook-Pro git_challenge % git commit -m "こんにちは、世界"
+[main 25c23e7] こんにちは、世界
+ 1 file changed, 1 insertion(+)
+masayukikuroda@kurodanoMacBook-Pro git_challenge % git status
+On branch main
+nothing to commit, working tree clean
+masayukikuroda@kurodanoMacBook-Pro git_challenge % git diff
+masayukikuroda@kurodanoMacBook-Pro git_challenge % git diff --staged
+masayukikuroda@kurodanoMacBook-Pro git_challenge % git diff hello_world.txt 
+masayukikuroda@kurodanoMacBook-Pro git_challenge % git log
+commit 25c23e7d07c5608066abd73bbd6eda20b05c8dea (HEAD -> main)
+Author: MasayukiKurodaGit <rakko.management@gmail.com>
+Date:   Tue Jun 10 21:59:02 2025 +0900
+
+    こんにちは、世界
+
+commit 3a7d7e4e82be0a24821ec39fd54028fb5baf21dd
+Author: MasayukiKurodaGit <rakko.management@gmail.com>
+Date:   Tue Jun 10 21:55:41 2025 +0900
+
+    HelloWorld
+
+commit 47311cc5aa79e8b909c11a737c202f1b91487e06
+Author: MasayukiKurodaGit <rakko.management@gmail.com>
+Date:   Tue Jun 10 21:46:11 2025 +0900
+
+    Hello world
+masayukikuroda@kurodanoMacBook-Pro git_challenge %  
+masayukikuroda@kurodanoMacBook-Pro git_challenge % 
+masayukikuroda@kurodanoMacBook-Pro git_challenge % ls
+hello_world.txt
+masayukikuroda@kurodanoMacBook-Pro git_challenge % git log --oneline
+25c23e7 (HEAD -> main) こんにちは、世界
+3a7d7e4 HelloWorld
+47311cc Hello world
